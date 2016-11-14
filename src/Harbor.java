@@ -16,7 +16,7 @@ import java.sql.SQLException;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 
-class Server
+class Harbor
 {
     static Connection sql_connection;
     static OutputStream out;
@@ -45,6 +45,7 @@ class Server
         catch(SQLException e)
         {
             System.err.println("Something's not right; SQL init failed");
+            e.printStackTrace();
         }
 
         // Initiate Server Socket
